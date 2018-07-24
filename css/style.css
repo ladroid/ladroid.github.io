@@ -8,8 +8,13 @@ html, body {
 }
 
 @viewport {
-    width: device-width ;
-    zoom: 1.0 ;
+    width: device-width;
+    zoom: 1;
+  }
+  @media screen and (max-width: 800px) {
+    .left, .main, .right {
+      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
   }
 
 h1 {
