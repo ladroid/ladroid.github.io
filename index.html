@@ -12,8 +12,16 @@
 </head>
 
 <body>  
-    <div class="nav">
-        <a class="nav_btn" href="#">&#9776</a>
+    <div class="nav" id="myTopnav">
+        <div class="dropdown">
+            <div class="inc">
+                <a href="javascript:void(0);" class="inc_btn" onclick="myFunction()">&#9776</a> 
+            </div>
+            <div class="dropdown-content">
+                <a href="index.html" class="active">Home</a>
+                <a href="/pdfjs-1.9.426-dist/web/KadjaiaCV.pdf" class="active">Resume</a>
+            </div>
+        </div>
         <a href="https://www.facebook.com/kadjaya.lado" class="fa fa-facebook"></a>
         <a href="https://twitter.com/puatachok_lado" class="fa fa-twitter"></a>
         <a href="https://www.linkedin.com/in/lado-kadjaia-834812136/" class="fa fa-linkedin"></a>
@@ -22,7 +30,17 @@
     <div class="banner">
         <h1>Android Developer</h1>
         <p class="tagline">Building products for mobile apps.</p>
-
         <a class="banner_btn" href="https://github.com/ladroid?tab=repositories"><p>Portfolio</p></a>
     </div>
+
+    <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "nav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "nav";
+                }
+            }
+    </script>
 </body>
